@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: white ;
+}
+
+.container {
+    background-color: #1F2937;
+    border: 0.1rem solid whitesmoke;
+    margin: 1rem;
+
+}
+
+input {
+    display: block;
+    margin: 1rem auto;
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    width: 5rem;
+}
+
+.container table {
+    margin: auto;
+    padding: 1rem;
+}
+th {
+    width: 24.75%;
+  }
+  
+  td {
+    width: 10.75%;
+  }
