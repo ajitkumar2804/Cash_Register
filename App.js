@@ -10,16 +10,15 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
 btncheck.addEventListener("click", function validateAmount() {
     hideMessage();
-    if (billAmount.value > 0) {
+    refreshTable();
+    if (billAmount.value > 0 && cashGiven.value>=billAmount.value) {
         if (cashGiven.value >= billAmount.value) {
             const amountToReturned = cashGiven.value - billAmount.value;
             calulateChange(amountToReturned);
 
-        } else {
-            showMessage("Enter Proper Amount")
         }
     } else {
-        showMessage("invalid bill amount");
+        showMessage("Please Enter Proper Values");
     }
 });
 function calulateChange(amountToReturned) {
@@ -39,6 +38,9 @@ function showMessage(msg) {
     message.innerHTML = msg;
 }
 
-
-
+function refreshTable() {
+    for (var i=0; i < availableNotes.length; i++) {
+        noOfNotes[i].innerText = "";
+    }
+}
 
