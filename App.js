@@ -25,9 +25,12 @@ btncheck.addEventListener("click", function validateAmount() {
 function calulateChange(amountToReturned) {
     for (let i = 0; i < availableNotes.length; i++) {
         const numberOfNotes = Math.trunc(amountToReturned / availableNotes[i]);
-    
+    if(noOfNotes>=0){
     amountToReturned %= availableNotes[i];
     noOfNotes[i].innerText = numberOfNotes;
+    }else{
+        noOfNotes[i].innerText= "0";
+    }
 }
 }
 function hideMessage() {
