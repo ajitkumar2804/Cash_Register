@@ -11,7 +11,7 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 btncheck.addEventListener("click", function validateAmount() {
     hideMessage();
     refreshTable();
-    if (billAmount.value > 0 && cashGiven.value>=billAmount.value) {
+    if (billAmount.value > 0 && cashGiven.value < billAmount.value) {
         if (cashGiven.value >= billAmount.value) {
             const amountToReturned = cashGiven.value - billAmount.value;
             calulateChange(amountToReturned);
